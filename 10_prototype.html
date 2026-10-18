@@ -1,0 +1,15 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Sprout 2.0 Prototype</title>
+<style>
+body{margin:0;background:#e9eee8;font-family:Inter,Arial,sans-serif;color:#172018}
+.app{max-width:520px;margin:0 auto;min-height:100vh;background:#f7f8f2;padding:24px;box-sizing:border-box}
+h1{font-size:22px;margin:0 0 16px}.screen{display:none}.screen.active{display:block}
+img{width:390px;max-width:100%;display:block;margin:auto;box-shadow:0 10px 30px #0001;border-radius:18px}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}
+button{border:1px solid #d9e0d8;background:white;padding:10px 13px;border-radius:12px;cursor:pointer;font-weight:650}
+button.primary{background:#2f6b4f;color:white;border-color:#2f6b4f}
+.note{font-size:13px;color:#66706a;line-height:1.5}
+</style></head><body><main class="app"><h1>Sprout 2.0 — Prototype</h1>
+<div class="note">Recruitment assignment concept. Use the navigation to review the continuous onboarding flow.</div><nav><button class="primary" onclick="show(0)">Home — Mobile</button><button class="" onclick="show(1)">Welcome</button><button class="" onclick="show(2)">What You Need</button><button class="" onclick="show(3)">Mobile / OTP</button><button class="" onclick="show(4)">KYC</button><button class="" onclick="show(5)">Verification Waiting</button></nav><section class="screen active" id="s0"><img src="01_home_mobile.svg" alt="Home — Mobile"></section><section class="screen " id="s1"><img src="03_onboarding_1_welcome.svg" alt="Welcome"></section><section class="screen " id="s2"><img src="04_onboarding_2_ready.svg" alt="What You Need"></section><section class="screen " id="s3"><img src="05_onboarding_3_otp.svg" alt="Mobile / OTP"></section><section class="screen " id="s4"><img src="06_onboarding_4_kyc.svg" alt="KYC"></section><section class="screen " id="s5"><img src="07_onboarding_5_waiting.svg" alt="Verification Waiting"></section><script>
+function show(n){document.querySelectorAll('.screen').forEach((e,i)=>e.classList.toggle('active',i===n));
+document.querySelectorAll('nav button').forEach((e,i)=>e.classList.toggle('primary',i===n));}
+</script></main></body></html>
